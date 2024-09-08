@@ -1,0 +1,73 @@
+{
+  "id": "delvebound",
+  "title": "Delvebound Support Module",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+	   "flags": {}
+    }
+  ],
+  "scripts": [
+    "scripts/delvebound.js"
+  ],
+  "description": "A (wip) module that makes minor changes to make it easier to run Delvebound on Foundry's 5e system.",
+  "authors": [
+    {
+      "name": "Sirus.exe",
+      "flags": {}
+    }
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "12"
+  },
+  "packs": [
+    {
+      "name": "delvebound-actors",
+      "label": "Delvebound Actors",
+      "path": "packs/delvebound-actors",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    },
+    {
+      "name": "delvebound-items",
+      "label": "Delvebound Items",
+      "path": "packs/delvebound-items",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    },
+    {
+      "name": "delvebound-spells",
+      "label": "Delvebound Spells",
+      "path": "packs/delvebound-spells",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    },
+    {
+      "name": "delvebound-rules",
+      "label": "Delvebound Rules",
+      "path": "packs/delvebound-rules",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    }
+  ]
+}
