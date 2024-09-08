@@ -1,5 +1,4 @@
 Hooks.once("init", () => {
-	const inspoisluck = game.i18n.localize("DND5E.Inspiration");
 	//Delete things that would get in the way
 	delete CONFIG.DND5E.currencies.cp;
 	delete CONFIG.DND5E.currencies.sp;
