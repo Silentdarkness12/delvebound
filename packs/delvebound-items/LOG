@@ -1,0 +1,8 @@
+2024/11/14-14:18:09.885 cd34 Recovering log #962
+2024/11/14-14:18:09.890 cd34 Delete type=0 #962
+2024/11/14-14:18:09.891 cd34 Delete type=3 #960
+2024/11/14-14:37:25.992 d01c Level-0 table #968: started
+2024/11/14-14:37:25.992 d01c Level-0 table #968: 0 bytes OK
+2024/11/14-14:37:25.993 d01c Delete type=0 #966
+2024/11/14-14:37:25.994 d01c Manual compaction at level-0 from '!folders!0gQs3F5TkA9zOdhT' @ 72057594037927935 : 1 .. '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 0 : 0; will stop at (end)
+2024/11/14-14:37:25.994 d01c Manual compaction at level-1 from '!folders!0gQs3F5TkA9zOdhT' @ 72057594037927935 : 1 .. '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 0 : 0; will stop at (end)

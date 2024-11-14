@@ -5,8 +5,8 @@ Hooks.once("init", () => {
     delete CONFIG.DND5E.currencies.gp;
     delete CONFIG.DND5E.currencies.ep;
     delete CONFIG.DND5E.languages.druidic;
-    //delete CONFIG.DND5E.languages.exotic;
-    //delete CONFIG.DND5E.languages.standard;
+    delete CONFIG.DND5E.languages.exotic;
+    delete CONFIG.DND5E.languages.standard;
     delete CONFIG.DND5E.sourcePacks.ITEMS;
     delete CONFIG.DND5E.spellSchools.abj;
     delete CONFIG.DND5E.spellSchools.con;
@@ -69,7 +69,6 @@ Hooks.once("init", () => {
     foundry.utils.mergeObject(CONFIG.DND5E.abilities.wis, {label: "Willpower", abbreviation: "wil"});
     foundry.utils.mergeObject(CONFIG.DND5E.abilities.cha, {label: "Personality", abbreviation: "per"});
     foundry.utils.mergeObject(CONFIG.DND5E.currencies.pp, {label: "Septims", abbreviation: "S"});
-    foundry.utils.mergeObject(CONFIG.DND5E.inspiration, {label: "Luck"});
     //Add Daedra creature type
     CONFIG.DND5E.creatureTypes.daedra = {
             icon: "icons/creatures/unholy/demon-fire-horned-mask.webp",
@@ -80,8 +79,6 @@ Hooks.once("init", () => {
     CONFIG.DND5E.featureTypes.birthsign = {
         label: "Birthsign"
         };
-    // Source books
-    CONFIG.DND5E.sourceBooks.delveboundbasic = "Basic Rules";
     // Languages 
     CONFIG.DND5E.languages.standard = {
         label: "Common Languages",
@@ -246,6 +243,7 @@ Hooks.once("init", () => {
     CONFIG.DND5E.weaponIds.rapier = "Compendium.delvebound.delvebound-items.Item.nqEilLf5bGDS4tjX";
     CONFIG.DND5E.weaponIds.sabre = "Compendium.delvebound.delvebound-items.Item.ksbhqf1YmuuNIgdN";
     CONFIG.DND5E.weaponIds.scimitar = "Compendium.delvebound.delvebound-items.Item.fOQ9Tr3E2Om5QoF4";
+	CONFIG.DND5E.weaponIds.scythe = "Compendium.delvebound.delvebound-items.Item.u9fDf0qDZLYNItw5";
     CONFIG.DND5E.weaponIds.shortbow = "Compendium.delvebound.delvebound-items.Item.jWHHPNcA8MZLaUan";
     CONFIG.DND5E.weaponIds.shortsword = "Compendium.delvebound.delvebound-items.Item.4LHPL1AYnVcEqzbz";
     CONFIG.DND5E.weaponIds.sickle = "Compendium.delvebound.delvebound-items.Item.KQXeuIRbIgayOaAu";
@@ -273,5 +271,348 @@ Hooks.once("init", () => {
     CONFIG.DND5E.defaultArtwork.Item.birthSign = "systems/dnd5e/icons/svg/items/feature.svg";
     //Compendium Remap
     CONFIG.DND5E.sourcePacks.ITEMS = "delvebound.delvebound-items";
-    //translation?
+	CONFIG.DND5E.sourcePacks.BACKGROUNDS = "delvebound.delvebound-items";
+	CONFIG.DND5E.sourcePacks.CLASSES = "delvebound.delvebound-items";
+	CONFIG.DND5E.sourcePacks.RACES = "delvebound.delvebound-items";
+    //Tool Proficiencies
+	CONFIG.DND5E.tools.alchemist = {
+		ability: "int",
+		id: "Compendium.delvebound.delvebound-items.Item.cIkZ7ndCHeDAABkt"
+	};
+	CONFIG.DND5E.tools.bagpipes = {
+        ability: "cha",
+        id: "Compendium.delvebound.delvebound-items.Item.YHgFyac2xidJ3Wok"
+	};
+	CONFIG.DND5E.tools.brewer = {
+        ability: "int",
+        id: "Compendium.delvebound.delvebound-items.Item.8lFNtYmPpSSe3MfY"
+    };
+    CONFIG.DND5E.tools.calligrapher = {
+        ability: "dex",
+		id: "Compendium.delvebound.delvebound-items.Item.SLfDUN602AwObHnG"
+    };
+	CONFIG.DND5E.tools.card = {
+		ability: "wis",
+		id: "Compendium.delvebound.delvebound-items.Item.4LrPPpqS2xiy1omK"
+	};
+	CONFIG.DND5E.tools.carpenter = {
+        ability: "str",
+		id: "Compendium.delvebound.delvebound-items.Item.ADvMYOr5tE8sU8h4"
+	};
+    CONFIG.DND5E.tools.cartographer = {
+		ability: "wis",
+		id: "Compendium.delvebound.delvebound-items.Item.ZZqo2NXtn7FmLX0l"
+	};
+    CONFIG.DND5E.tools.chess = {
+		ability: "wis",
+		id: "Compendium.delvebound.delvebound-items.Item.ApsnbQyRPTh5Xy4Y"
+	};
+    CONFIG.DND5E.tools.cobbler =  { 
+        ability: "dex",
+	    id: "Compendium.delvebound.delvebound-items.Item.TtDsVcdkVEMXr5bG"
+	};
+    CONFIG.DND5E.tools.cook = {
+        ability: "wis",		
+		    id: "Compendium.delvebound.delvebound-items.Item.xrN6ixRk3Edr5VSS"
+	
+	};
+    CONFIG.DND5E.tools.dice = {
+        ability: "wis",		
+		    id: "Compendium.delvebound.delvebound-items.Item.YkShtg9bzYE1zlQk"
+    };
+    CONFIG.DND5E.tools.disg = {
+        ability: "cha",	
+		    id: "Compendium.delvebound.delvebound-items.Item.lHvWYTn45Dx8aAA2"
+	
+	};
+    CONFIG.DND5E.tools.drum = {
+        ability: "cha",		
+		    id: "Compendium.delvebound.delvebound-items.Item.2KxWNk0cDIFJ2BJo"
+	
+	};
+    CONFIG.DND5E.tools.dulcimer = {
+        ability: "cha",
+		    id: "Compendium.delvebound.delvebound-items.Item.TWg5atX60b6BR8ly"
+	
+	};
+    CONFIG.DND5E.tools.flute = {
+        ability: "cha",
+		    id: "Compendium.delvebound.delvebound-items.Item.B5cOTO24dxuBbPSJ"
+	
+	};
+    CONFIG.DND5E.tools.forg = {
+        ability: "dex",
+		    id: "Compendium.delvebound.delvebound-items.Item.y9LiyDG84NX4jrnL"
+	
+	};
+    CONFIG.DND5E.tools.glassblower = {
+        ability: "int",
+		    id: "Compendium.delvebound.delvebound-items.Item.0OeBQR7xfwxumh6S"
+	
+	};
+    CONFIG.DND5E.tools.herb = {
+		ability: "int",
+		    id: "Compendium.delvebound.delvebound-items.Item.WYDi5ihjgm7nJ7zU"
+	
+	};
+    CONFIG.DND5E.tools.horn = {
+		ability: "cha",
+		    id: "Compendium.delvebound.delvebound-items.Item.dT5wcwdeOWwNFGMV"
+	
+	};
+    CONFIG.DND5E.tools.jeweler = {
+		ability: "int",
+		    id: "Compendium.delvebound.delvebound-items.Item.HnJJT1tXPZAXuJsc"
+	
+	};
+    CONFIG.DND5E.tools.leatherworker = {
+		ability: "dex",
+		    id: "Compendium.delvebound.delvebound-items.Item.n54xMLqz8u6sMJ4b"
+	
+	};
+    CONFIG.DND5E.tools.lute = {
+		ability: "cha",
+		    id: "Compendium.delvebound.delvebound-items.Item.82qLxKbW8DNtHVuF"
+	
+	};
+    CONFIG.DND5E.tools.lyre = {
+		ability: "cha",
+		    id: "Compendium.delvebound.delvebound-items.Item.5cA89YvGyENRkkHu"
+	
+	};
+    CONFIG.DND5E.tools.mason = {
+		ability: "str",
+		    id: "Compendium.delvebound.delvebound-items.Item.utzNJfuaixKvCILw"
+	
+	};
+    CONFIG.DND5E.tools.navg = {
+		ability: "wis",
+		    id: "Compendium.delvebound.delvebound-items.Item.7KyMUcsJRLEooWDs"
+	
+	};
+    CONFIG.DND5E.tools.painter = {
+		ability: "wis",
+		    id: "Compendium.delvebound.delvebound-items.Item.KvjmfoHVlXx3k8Ki"
+	
+	};
+    CONFIG.DND5E.tools.panflute = {
+		ability: "cha",
+		    id: "Compendium.delvebound.delvebound-items.Item.VOr793cwjLoQBzRo"
+	
+	};
+    CONFIG.DND5E.tools.pois = {
+		ability: "int",
+		    id: "Compendium.delvebound.delvebound-items.Item.zQ4oWNcmAyEP5WCP"
+	
+	};
+    CONFIG.DND5E.tools.potter = {
+		ability: "int",
+		    id: "Compendium.delvebound.delvebound-items.Item.UL7ZLsCryOxmDahb"
+	
+	};
+    CONFIG.DND5E.tools.shawm = {
+		ability: "cha",
+		    id: "Compendium.delvebound.delvebound-items.Item.u6PhOSD1dVRVeZpv"
+	
+	};
+    CONFIG.DND5E.tools.smith = {
+		ability: "str",
+		    id: "Compendium.delvebound.delvebound-items.Item.IKvMyO64G2GheC8v"
+	
+	};
+    CONFIG.DND5E.tools.thief = {
+		ability: "dex",
+		    id: "Compendium.delvebound.delvebound-items.Item.YieSfLFowIwsRY1q"
+	
+	};
+    CONFIG.DND5E.tools.tinker = {
+		ability: "dex",
+		    id: "Compendium.delvebound.delvebound-items.Item.xz4rWW6gl0znqUzs"
+	
+	};
+    CONFIG.DND5E.tools.viol = {
+		ability: "cha",
+		    id: "Compendium.delvebound.delvebound-items.Item.FaUY1gLFMMaeLXws"
+	
+	};
+    CONFIG.DND5E.tools.weaver = {
+		ability: "dex",
+		    id: "Compendium.delvebound.delvebound-items.Item.jYoOUCYlT4eIOVy8"
+	
+	};
+    CONFIG.DND5E.tools.woodcarver = {
+		ability: "dex",
+		    id: "Compendium.delvebound.delvebound-items.Item.NVmQ74FN2UdsVUfm"
+	};
+    CONFIG.DND5E.armorIds.breastplate = "Compendium.delvebound.delvebound-items.Item.xgRd5BgGUs2tddxI";
+    CONFIG.DND5E.armorIds.chainmail = "Compendium.delvebound.delvebound-items.Item.PoLRaQP3nV3tNjET";
+    CONFIG.DND5E.armorIds.chainshirt = "Compendium.delvebound.delvebound-items.Item.uN5Ijn8e334dTy6E";
+    CONFIG.DND5E.armorIds.halfplate = "Compendium.delvebound.delvebound-items.Item.ETcOQqRJUo9PO8uE";
+    CONFIG.DND5E.armorIds.hide = "Compendium.delvebound.delvebound-items.Item.9NbiLwQyguflljZm";
+    CONFIG.DND5E.armorIds.leather = "Compendium.delvebound.delvebound-items.Item.JNlmlRq9I92Van5q";
+    CONFIG.DND5E.armorIds.padded = "Compendium.delvebound.delvebound-items.Item.1RIbVUmZaD8bLgjp";
+    CONFIG.DND5E.armorIds.plate = "Compendium.delvebound.delvebound-items.Item.2QgtCfaouI326vZf";
+    CONFIG.DND5E.armorIds.ringmail = "Compendium.delvebound.delvebound-items.Item.UyfZ1RQuXpsrIwT4";
+    CONFIG.DND5E.armorIds.scalemail = "Compendium.delvebound.delvebound-items.Item.nv3I8Et11WVprPz5";
+    CONFIG.DND5E.armorIds.splint = "Compendium.delvebound.delvebound-items.Item.m2b5c1Z4tWKse198";
+    CONFIG.DND5E.armorIds.studded = "Compendium.delvebound.delvebound-items.Item.8m5w5RjmPtaqXhOr";
+    CONFIG.DND5E.shieldIds.buckler = "Compendium.delvebound.delvebound-items.Item.P98jgnuxunCWx9fw";
+    CONFIG.DND5E.shieldIds.shield = "Compendium.delvebound.delvebound-items.Item.tenG7Ja0GTJGXwXz";
+	CONFIG.DND5E.sourceBooks["Basic Rules"] = "Delvebound Basic Rules";
+	CONFIG.DND5E.sourceBooks["LGtC"] = "Legionaire's Guide";
+	CONFIG.DND5E.sourceBooks["EoE"] = "Enemies of Elsweyr";
+	CONFIG.DND5E.sourceBooks["BC"] = "Blessings and Curses";
+	CONFIG.DND5E.sourceBooks["SoS"] = "Shadows over Skyrim";
+	CONFIG.DND5E.sourceBooks["ToT"] = "Terrors of Tamriel";
+	CONFIG.DND5E.sourceBooks["MoM"] = "Monsters of Murkmire";
+	CONFIG.DND5E.sourceBooks["AC"] = "Anthropology Companion";
+	CONFIG.DND5E.sourceBooks["BoS"] = "Bestiary of Summerset";
+    //Conditions
+	CONFIG.DND5E.conditionTypes.bleeding = {
+		label: "Bleeding",
+		icon: "systems/dnd5e/icons/svg/statuses/bleeding.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.AXtmUP0WAUZEcahl"
+	};
+	CONFIG.DND5E.conditionTypes.burning = {
+        label: "Burning",
+		icon: "systems/dnd5e/icons/svg/statuses/burning.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.KQHu8rDk6WS5fKbc"
+	};
+	CONFIG.statusEffects.push({
+		id: "camouflaged",
+		img: "systems/dnd5e/icons/svg/statuses/hiding.svg",
+		name: "Camouflaged",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.vQx5EU35pyP9xlNV",
+		_id: "dnd5ecamo0000000"
+	});
+	CONFIG.DND5E.conditionTypes.camouflaged = {
+		label: "Camouflaged",
+		icon: "systems/dnd5e/icons/svg/statuses/hiding.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.vQx5EU35pyP9xlNV"
+	};
+	CONFIG.statusEffects.push({
+		id: "chilled",
+		img: "systems/dnd5e/icons/svg/statuses/hiding.svg",
+		name: "Chilled",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.JhJyry9O5FJ4uYhi",
+		_id: "dnd5echilled0000"
+	});
+	CONFIG.DND5E.conditionTypes.chilled = {
+		label: "Chilled",
+		icon: "systems/dnd5e/icons/svg/damage/cold.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.JhJyry9O5FJ4uYhi"
+	};
+    CONFIG.statusEffects.push({
+        id: "dazed",
+        img: "icons/svg/daze.svg",
+        name: "Dazed",
+        reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.eYZnlr88XVQsqsAY",
+        _id: "dnd5edazed000000"
     });
+	CONFIG.DND5E.conditionTypes.dazed = {
+		label: "Dazed",
+		icon: "icons/svg/daze.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.eYZnlr88XVQsqsAY"
+	};
+	CONFIG.statusEffects.push({
+		id: "frenzied",
+		img: "icons/svg/eye.svg",
+		name: "Frenzied",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.zrva4wBpV2OKdydx",
+		_id: "dnd5efrenzied000"
+	});
+	CONFIG.DND5E.conditionTypes.frenzied = {
+		label: "Frenzied",
+		icon: "icons/svg/eye.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.zrva4wBpV2OKdydx"
+	};
+	CONFIG.statusEffects.push({
+		id: "frozen",
+		img: "systems/dnd5e/icons/svg/trait-condition-immunities.svg",
+		name: "Frozen",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.3IAjNzgQPGUizPuo",
+		statuses: ["incapacitated"],
+		_id: "dnd5efrozen00000"
+	});
+	CONFIG.DND5E.conditionTypes.frozen = {
+		label: "Frozen",
+		icon: "systems/dnd5e/icons/svg/trait-condition-immunities.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.3IAjNzgQPGUizPuo"
+	};
+	CONFIG.statusEffects.push({
+		id: "hysterical",
+		img: "icons/svg/terror.svg",
+		name: "Hysterical",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.DRypEt7ShsJ0TzT2",
+		_id: "dnd5ehysterical0"
+	});
+	CONFIG.DND5E.conditionTypes.hysterical = {
+	    label: "Hysterical",
+        icon: "icons/svg/terror.svg",
+        reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.DRypEt7ShsJ0TzT2"		
+	};
+	CONFIG.statusEffects.push({
+		id: "intoxicated",
+		img: "icons/svg/tankard.svg",
+		name: "Intoxicated",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.ttDc1DLlZaadNbUh",
+		statuses: ["poisoned"],
+		_id: "dnd5eintoxicated"
+	});
+	CONFIG.DND5E.conditionTypes.intoxicated = {
+		label: "Intoxicated",
+		icon: "icons/svg/tankard.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.ttDc1DLlZaadNbUh"
+	};
+	CONFIG.statusEffects.push({
+		id: "rallied",
+		img: "icons/svg/upgrade.svg",
+		name: "Rallied",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.njtnG7xp1aFzxWVP",
+		_id: "dnd5erallied0000"
+	});
+	CONFIG.DND5E.conditionTypes.rallied = {
+		label: "Rallied",
+		icon: "icons/svg/upgrade.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.njtnG7xp1aFzxWVP"
+	};
+	CONFIG.statusEffects.push({
+		id: "staggered",
+		img: "icons/svg/stoned.svg",
+		name: "Staggered",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.v1PyO69WfKWX7zvF",
+		_id: "dnd5estaggered00"
+	});
+	CONFIG.DND5E.conditionTypes.staggered = {
+		label: "Staggered",
+		icon: "icons/svg/stoned.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.v1PyO69WfKWX7zvF"
+	};
+	CONFIG.statusEffects.push({
+		id: "weakened",
+		img: "icons/svg/downgrade.svg",
+		name: "Weakened",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.vfmd8La7acycdDRZ",
+		_id: "dnd5eweakened000"
+	});
+	CONFIG.DND5E.conditionTypes.weakened = {
+		label: "Weakened",
+		icon: "icons/svg/downgrade.svg",
+		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.vfmd8La7acycdDRZ"
+	};
+	//New Class Feature Types
+	CONFIG.DND5E.featureTypes.class.subtypes.ki = "Stamina Ability";
+	CONFIG.DND5E.featureTypes.class.subtypes.deathdisease = "Deathbringer Disease";
+	CONFIG.DND5E.featureTypes.class.subtypes.maxim = "Maxim";
+	CONFIG.DND5E.featureTypes.class.subtypes.shout = "Dragon Shout";
+	CONFIG.DND5E.featureTypes.class.subtypes.prayer = "Speaker Prayer";
+	CONFIG.DND5E.featureTypes.class.subtypes.spiritoffering = "Spiritual Offering";
+	CONFIG.DND5E.featureTypes.class.subtypes.wealmark = "Weal Marking";
+	CONFIG.DND5E.featureTypes.class.subtypes.wildtech = "Wild Technique";
+	CONFIG.DND5E.featureTypes.class.subtypes.assinpoison = "Poison";
+	CONFIG.DND5E.featureTypes.class.subtypes.imbuement = "Spellsword Imbuement";
+	CONFIG.DND5E.featureTypes.class.subtypes.debilstrike = "Debilitating Strike";
+	CONFIG.DND5E.featureTypes.class.subtypes.maneuver = "Tactic";
+	CONFIG.DND5E.featureTypes.class.subtypes.exploit = "Master's Exploit";
+ });
+ 

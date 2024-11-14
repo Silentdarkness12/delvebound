@@ -1,0 +1,8 @@
+2024/11/14-14:18:10.143 2fac Recovering log #662
+2024/11/14-14:18:10.145 2fac Delete type=0 #662
+2024/11/14-14:18:10.145 2fac Delete type=3 #660
+2024/11/14-14:37:25.998 d01c Level-0 table #668: started
+2024/11/14-14:37:25.998 d01c Level-0 table #668: 0 bytes OK
+2024/11/14-14:37:25.998 d01c Delete type=0 #666
+2024/11/14-14:37:25.999 d01c Manual compaction at level-0 from '!folders!8beng4h5fXzYNEYV' @ 72057594037927935 : 1 .. '!journal.pages!pzE8lOxCV7RcZBNy.XeRptZyyVHIHrTnS' @ 0 : 0; will stop at (end)
+2024/11/14-14:37:25.999 d01c Manual compaction at level-1 from '!folders!8beng4h5fXzYNEYV' @ 72057594037927935 : 1 .. '!journal.pages!pzE8lOxCV7RcZBNy.XeRptZyyVHIHrTnS' @ 0 : 0; will stop at (end)

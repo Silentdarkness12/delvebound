@@ -1,12 +1,12 @@
 {
   "id": "delvebound",
-  "title": "Delvebound Support Module",
+  "title": "Delvebound",
   "languages": [
     {
       "lang": "en",
       "name": "English",
       "path": "lang/en.json",
-	   "flags": {}
+      "flags": {}
     }
   ],
   "scripts": [
@@ -30,44 +30,99 @@
       "label": "Delvebound Actors",
       "path": "packs/delvebound-actors",
       "type": "Actor",
+      "system": "dnd5e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "dnd5e"
+      }
     },
     {
       "name": "delvebound-items",
       "label": "Delvebound Items",
       "path": "packs/delvebound-items",
       "type": "Item",
+      "system": "dnd5e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "dnd5e"
+      }
     },
     {
       "name": "delvebound-spells",
       "label": "Delvebound Spells",
       "path": "packs/delvebound-spells",
       "type": "Item",
+      "system": "dnd5e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "dnd5e"
+      }
     },
     {
       "name": "delvebound-rules",
       "label": "Delvebound Rules",
       "path": "packs/delvebound-rules",
       "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "delvebound-tables",
+      "label": "Delvebound Tables",
+      "path": "packs/delvebound-tables",
+      "type": "RollTable",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "delvebound-scenes",
+      "label": "Delvebound Scenes",
+      "path": "packs/delvebound-scenes",
+      "type": "Scene",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
       "system": "dnd5e"
     }
-  ]
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "dnd5e-spellpoints",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "socketlib",
+        "type": "module",
+        "compatibility": {}
+      }
+    ],
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {}
+      }
+    ],
+    "recommends": [
+      {
+        "id": "dae",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  }
 }

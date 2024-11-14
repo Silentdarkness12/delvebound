@@ -1,0 +1,8 @@
+2024/11/14-14:18:10.194 cd34 Recovering log #10
+2024/11/14-14:18:10.197 cd34 Delete type=0 #10
+2024/11/14-14:18:10.197 cd34 Delete type=3 #8
+2024/11/14-14:37:25.996 d01c Level-0 table #15: started
+2024/11/14-14:37:25.996 d01c Level-0 table #15: 0 bytes OK
+2024/11/14-14:37:25.996 d01c Delete type=0 #13
+2024/11/14-14:37:25.999 d01c Manual compaction at level-0 from '!scenes!AGgijKevrIIWRTY4' @ 72057594037927935 : 1 .. '!scenes.walls!AGgijKevrIIWRTY4.nPBW8ETkRiLG8oSH' @ 0 : 0; will stop at (end)
+2024/11/14-14:37:25.999 d01c Manual compaction at level-1 from '!scenes!AGgijKevrIIWRTY4' @ 72057594037927935 : 1 .. '!scenes.walls!AGgijKevrIIWRTY4.nPBW8ETkRiLG8oSH' @ 0 : 0; will stop at (end)
