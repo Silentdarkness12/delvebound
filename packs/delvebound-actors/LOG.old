@@ -1,27 +1,3 @@
-2024/11/14-09:44:37.699 cd34 Recovering log #789
-2024/11/14-09:44:37.702 cd34 Delete type=0 #789
-2024/11/14-09:44:37.702 cd34 Delete type=3 #772
-2024/11/14-13:27:14.703 d01c Level-0 table #805: started
-2024/11/14-13:27:14.751 d01c Level-0 table #805: 1567300 bytes OK
-2024/11/14-13:27:14.780 d01c Delete type=0 #803
-2024/11/14-13:27:14.784 d01c Manual compaction at level-0 from '!actors!0FO1yhKRK78NJDSj' @ 72057594037927935 : 1 .. '!folders!zSfnejTcDDID7N8S' @ 0 : 0; will stop at (end)
-2024/11/14-13:27:14.786 d01c Manual compaction at level-1 from '!actors!0FO1yhKRK78NJDSj' @ 72057594037927935 : 1 .. '!folders!zSfnejTcDDID7N8S' @ 0 : 0; will stop at '!folders!sYJCA6N8lHYAZi6C' @ 14612 : 1
-2024/11/14-13:27:14.786 d01c Compacting 1@1 + 7@2 files
-2024/11/14-13:27:14.864 d01c Generated table #806@1: 549 keys, 2121895 bytes
-2024/11/14-13:27:14.934 d01c Generated table #807@1: 1415 keys, 2122214 bytes
-2024/11/14-13:27:15.042 d01c Generated table #808@1: 1570 keys, 2125209 bytes
-2024/11/14-13:27:15.117 d01c Generated table #809@1: 1554 keys, 2127277 bytes
-2024/11/14-13:27:15.257 d01c Generated table #810@1: 1556 keys, 2124817 bytes
-2024/11/14-13:27:15.382 d01c Generated table #811@1: 1572 keys, 2124205 bytes
-2024/11/14-13:27:15.486 d01c Generated table #812@1: 2255 keys, 1603540 bytes
-2024/11/14-13:27:15.486 d01c Compacted 1@1 + 7@2 files => 14349157 bytes
-2024/11/14-13:27:15.487 d01c compacted to: files[ 0 0 7 0 0 0 0 ]
-2024/11/14-13:27:15.487 d01c Delete type=2 #793
-2024/11/14-13:27:15.505 d01c Delete type=2 #794
-2024/11/14-13:27:15.521 d01c Delete type=2 #795
-2024/11/14-13:27:15.528 d01c Delete type=2 #796
-2024/11/14-13:27:15.529 d01c Delete type=2 #799
-2024/11/14-13:27:15.529 d01c Delete type=2 #800
-2024/11/14-13:27:15.530 d01c Delete type=2 #801
-2024/11/14-13:27:15.530 d01c Delete type=2 #805
-2024/11/14-13:27:15.573 d01c Manual compaction at level-1 from '!folders!sYJCA6N8lHYAZi6C' @ 14612 : 1 .. '!folders!zSfnejTcDDID7N8S' @ 0 : 0; will stop at (end)
+2024/11/20-10:37:00.255 53dc Recovering log #823
+2024/11/20-10:37:00.258 53dc Delete type=0 #823
+2024/11/20-10:37:00.258 53dc Delete type=3 #821

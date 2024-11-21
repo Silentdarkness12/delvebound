@@ -8,8 +8,6 @@ Some efforts have been made to handle automation for most of the features in thi
 
 Instructions:
 
-Go to releases and download the zip file, and extract the folder into your Foundry VTT modules folder.
-
 Make sure to download and install all dependencies that this module requires, including Advanced Magic.
 
 However, before using Delvebound, you will, for now, need to manually install a specific version of DAE that still technically supports (to my knowledge) D&D 4.x. Manually download this version of Dynamic Active Effects using the below manifest link:
