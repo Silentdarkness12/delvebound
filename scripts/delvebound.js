@@ -131,6 +131,7 @@ Hooks.once("init", () => {
             spriggan: "Spriggan"
             }
         };
+	CONFIG.DND5E.languages.cant = "Thieves' Cant";
     //Spell Schools
     CONFIG.DND5E.spellSchools.alteration = {
         label: "Alteration",
