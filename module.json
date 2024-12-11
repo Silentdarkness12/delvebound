@@ -126,6 +126,6 @@
     ]
   },
   "url": "https://github.com/Silentdarkness12/delvebound/tree/main#readme",
-  "manifest": "https://github.com/Silentdarkness12/delvebound/blob/main/module.json",
+  "manifest": "https://raw.githubusercontent.com/Silentdarkness12/delvebound/refs/heads/main/module.json",
   "download": "https://github.com/Silentdarkness12/delvebound/releases/download/0.6/delvebound.zip"
 }
