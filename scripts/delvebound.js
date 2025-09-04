@@ -323,7 +323,7 @@ Hooks.once("init", () => {
     };
     CONFIG.DND5E.tools.disg = {
         ability: "cha",	
-		    id: "Compendium.delvebound.delvebound-items.Item.lHvWYTn45Dx8aAA2"
+		    id: "Compendium.delvebound.delvebound-items.Item.NTJM51gme15vq2cA"
 	
 	};
     CONFIG.DND5E.tools.drum = {
@@ -462,6 +462,7 @@ Hooks.once("init", () => {
 	CONFIG.DND5E.sourceBooks["Basic Rules"] = "Delvebound Basic Rules";
 	CONFIG.DND5E.sourceBooks["LGtC"] = "Legionaire's Guide";
 	CONFIG.DND5E.sourceBooks["EoE"] = "Enemies of Elsweyr";
+	CONFIG.DND5E.sourceBooks["MGA"] = "Mages Guild Arcana";
 	CONFIG.DND5E.sourceBooks["BC"] = "Blessings and Curses";
 	CONFIG.DND5E.sourceBooks["SoS"] = "Shadows over Skyrim";
 	CONFIG.DND5E.sourceBooks["ToT"] = "Terrors of Tamriel";
@@ -615,5 +616,7 @@ Hooks.once("init", () => {
 	CONFIG.DND5E.featureTypes.class.subtypes.debilstrike = "Debilitating Strike";
 	CONFIG.DND5E.featureTypes.class.subtypes.maneuver = "Tactic";
 	CONFIG.DND5E.featureTypes.class.subtypes.exploit = "Master's Exploit";
+	//Culture feat type
+	CONFIG.DND5E.featureTypes.feat.subtypes.culture = "Culture";
  });
  
