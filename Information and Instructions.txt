@@ -8,10 +8,7 @@ Some efforts have been made to handle automation for most of the features in thi
 
 Instructions:
 
-Make sure to download and install all dependencies that this module requires, including Advanced Magic.
-
-However, before using Delvebound, you will, for now, need to manually install a specific version of DAE that still technically supports (to my knowledge) D&D 4.x. Manually download this version of Dynamic Active Effects using the below manifest link:
-https://gitlab.com/tposney/dae/raw/dndv4/package/module.json
+Make sure to download and install all dependencies that this module requires, including Advanced Magic and DAE(Dynamic Effects Using Active Effects)
 
 Once you have everything installed and activated, you can find everything you are looking for in the Delvebound compendiums. There is one last step, however, for dungeon masters.
 
