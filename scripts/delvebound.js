@@ -183,6 +183,13 @@ Hooks.once("init", () => {
     CONFIG.DND5E.weaponProficiencies.axe = "Axe Weapons";
     CONFIG.DND5E.weaponProficiencies.pole = "Polearm Weapons";
     CONFIG.DND5E.weaponProficiencies.hand = "Hand to Hand Weapons";
+	CONFIG.DND5E.weaponTypeMap.blunt = "melee";
+	CONFIG.DND5E.weaponTypeMap.shortblade = "melee";
+	CONFIG.DND5E.weaponTypeMap.longblade = "melee";
+	CONFIG.DND5E.weaponTypeMap.marksman = "ranged";
+	CONFIG.DND5E.weaponTypeMap.axe = "melee";
+	CONFIG.DND5E.weaponTypeMap.pole = "melee";
+	CONFIG.DND5E.weaponTypeMap.hand = "melee";
     CONFIG.DND5E.weaponProficienciesMap.blunt = "blunt";
     CONFIG.DND5E.weaponProficienciesMap.shortblade = "shortblade";
     CONFIG.DND5E.weaponProficienciesMap.longblade = "longblade";
@@ -260,6 +267,8 @@ Hooks.once("init", () => {
     CONFIG.DND5E.weaponIds.warhammer = "Compendium.delvebound.delvebound-items.Item.2IRXuzpP6UOC1Izn";
     CONFIG.DND5E.weaponIds.warmace = "Compendium.delvebound.delvebound-items.Item.ykr3xsFv431GQnsG";
     CONFIG.DND5E.weaponIds.whip = "Compendium.delvebound.delvebound-items.Item.10b1aJ5yJEt0JzK4";
+	CONFIG.DND5E.weaponIds.musket = "Compendium.delvebound.delvebound-items.Item.qSjDBCC6rSBSwJCl";
+	CONFIG.DND5E.weaponIds.pistol = "Compendium.delvebound.delvebound-items.Item.bfbgAYS1MVvAeLmc";
     //Ammo
     CONFIG.DND5E.ammoIds.arrow = "Compendium.delvebound.delvebound-items.Item.5t4PjTU6HSJCIguk";
     CONFIG.DND5E.ammoIds.blowgunNeedle = "Compendium.delvebound.delvebound-items.Item.lMhfLeAG4cC7FleA";
@@ -469,137 +478,80 @@ Hooks.once("init", () => {
 	CONFIG.DND5E.sourceBooks["MoM"] = "Monsters of Murkmire";
 	CONFIG.DND5E.sourceBooks["AC"] = "Anthropology Companion";
 	CONFIG.DND5E.sourceBooks["BoS"] = "Bestiary of Summerset";
+	CONFIG.DND5E.sourceBooks["FGTM"] = "Fighters Guild Training Manual";
     //Conditions
-	CONFIG.DND5E.conditionTypes.bleeding = {
-		label: "Bleeding",
-		icon: "systems/dnd5e/icons/svg/statuses/bleeding.svg",
+	delete CONFIG.DND5E.conditionTypes.bleeding;
+	delete CONFIG.DND5E.conditionTypes.burning;
+	delete CONFIG.DND5E.conditionTypes.camouflaged;
+	delete CONFIG.DND5E.conditionTypes.chilled;
+	delete CONFIG.DND5E.conditionTypes.dazed;
+	delete CONFIG.DND5E.conditionTypes.frenzied;
+	delete CONFIG.DND5E.conditionTypes.frozen;
+	delete CONFIG.DND5E.conditionTypes.hysterical;
+	delete CONFIG.DND5E.conditionTypes.intoxicated;
+	delete CONFIG.DND5E.conditionTypes.rallied;
+	delete CONFIG.DND5E.conditionTypes.staggered;
+	delete CONFIG.DND5E.conditionTypes.weakened;
+	CONFIG.DND5E.conditionTypes.Bleeding = {
+		name: "Bleeding",
+		img: "systems/dnd5e/icons/svg/statuses/bleeding.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.AXtmUP0WAUZEcahl"
 	};
-	CONFIG.DND5E.conditionTypes.burning = {
-        label: "Burning",
-		icon: "systems/dnd5e/icons/svg/statuses/burning.svg",
+	CONFIG.DND5E.conditionTypes.Burning = {
+        name: "Burning",
+		img: "systems/dnd5e/icons/svg/statuses/burning.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.KQHu8rDk6WS5fKbc"
 	};
-	CONFIG.statusEffects.push({
-		id: "camouflaged",
-		img: "systems/dnd5e/icons/svg/statuses/hiding.svg",
+	CONFIG.DND5E.conditionTypes.Camouflaged = {
 		name: "Camouflaged",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.vQx5EU35pyP9xlNV",
-		_id: "dnd5ecamo0000000"
-	});
-	CONFIG.DND5E.conditionTypes.camouflaged = {
-		label: "Camouflaged",
-		icon: "systems/dnd5e/icons/svg/statuses/hiding.svg",
+		img: "systems/dnd5e/icons/svg/statuses/hiding.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.vQx5EU35pyP9xlNV"
 	};
-	CONFIG.statusEffects.push({
-		id: "chilled",
-		img: "systems/dnd5e/icons/svg/statuses/hiding.svg",
+	CONFIG.DND5E.conditionTypes.Chilled = {
 		name: "Chilled",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.JhJyry9O5FJ4uYhi",
-		_id: "dnd5echilled0000"
-	});
-	CONFIG.DND5E.conditionTypes.chilled = {
-		label: "Chilled",
-		icon: "systems/dnd5e/icons/svg/damage/cold.svg",
+		img: "icons/svg/ice-aura.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.JhJyry9O5FJ4uYhi"
 	};
-    CONFIG.statusEffects.push({
-        id: "dazed",
-        img: "icons/svg/daze.svg",
-        name: "Dazed",
-        reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.eYZnlr88XVQsqsAY",
-        _id: "dnd5edazed000000"
-    });
-	CONFIG.DND5E.conditionTypes.dazed = {
-		label: "Dazed",
-		icon: "icons/svg/daze.svg",
+	CONFIG.DND5E.conditionTypes.Dazed = {
+		name: "Dazed",
+		img: "icons/svg/daze.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.eYZnlr88XVQsqsAY"
 	};
-	CONFIG.statusEffects.push({
-		id: "frenzied",
-		img: "icons/svg/eye.svg",
+	CONFIG.DND5E.conditionTypes.Frenzied = {
 		name: "Frenzied",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.zrva4wBpV2OKdydx",
-		_id: "dnd5efrenzied000"
-	});
-	CONFIG.DND5E.conditionTypes.frenzied = {
-		label: "Frenzied",
-		icon: "icons/svg/eye.svg",
+		img: "icons/svg/eye.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.zrva4wBpV2OKdydx"
 	};
-	CONFIG.statusEffects.push({
-		id: "frozen",
-		img: "systems/dnd5e/icons/svg/trait-condition-immunities.svg",
+	CONFIG.DND5E.conditionTypes.Frozen = {
 		name: "Frozen",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.3IAjNzgQPGUizPuo",
+		img: "icons/svg/frozen.svg",
 		statuses: ["incapacitated"],
-		_id: "dnd5efrozen00000"
-	});
-	CONFIG.DND5E.conditionTypes.frozen = {
-		label: "Frozen",
-		icon: "systems/dnd5e/icons/svg/trait-condition-immunities.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.3IAjNzgQPGUizPuo"
 	};
-	CONFIG.statusEffects.push({
-		id: "hysterical",
-		img: "icons/svg/terror.svg",
-		name: "Hysterical",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.DRypEt7ShsJ0TzT2",
-		_id: "dnd5ehysterical0"
-	});
-	CONFIG.DND5E.conditionTypes.hysterical = {
-	    label: "Hysterical",
-        icon: "icons/svg/terror.svg",
+	CONFIG.DND5E.conditionTypes.Hysterical = {
+	    name: "Hysterical",
+        img: "icons/svg/terror.svg",
         reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.DRypEt7ShsJ0TzT2"		
 	};
-	CONFIG.statusEffects.push({
-		id: "intoxicated",
-		img: "icons/svg/tankard.svg",
+	CONFIG.DND5E.conditionTypes.Intoxicated = {
 		name: "Intoxicated",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.ttDc1DLlZaadNbUh",
+		img: "icons/svg/tankard.svg",
 		statuses: ["poisoned"],
-		_id: "dnd5eintoxicated"
-	});
-	CONFIG.DND5E.conditionTypes.intoxicated = {
-		label: "Intoxicated",
-		icon: "icons/svg/tankard.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.ttDc1DLlZaadNbUh"
 	};
-	CONFIG.statusEffects.push({
-		id: "rallied",
-		img: "icons/svg/upgrade.svg",
+	CONFIG.DND5E.conditionTypes.Rallied = {
 		name: "Rallied",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.njtnG7xp1aFzxWVP",
-		_id: "dnd5erallied0000"
-	});
-	CONFIG.DND5E.conditionTypes.rallied = {
-		label: "Rallied",
-		icon: "icons/svg/upgrade.svg",
+		img: "icons/svg/upgrade.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.njtnG7xp1aFzxWVP"
 	};
-	CONFIG.statusEffects.push({
-		id: "staggered",
-		img: "icons/svg/stoned.svg",
+	CONFIG.DND5E.conditionTypes.Staggered = {
 		name: "Staggered",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.v1PyO69WfKWX7zvF",
-		_id: "dnd5estaggered00"
-	});
-	CONFIG.DND5E.conditionTypes.staggered = {
-		label: "Staggered",
-		icon: "icons/svg/stoned.svg",
+		img: "icons/svg/stoned.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.v1PyO69WfKWX7zvF"
 	};
-	CONFIG.statusEffects.push({
-		id: "weakened",
-		img: "icons/svg/downgrade.svg",
+	CONFIG.DND5E.conditionTypes.Weakened = {
 		name: "Weakened",
-		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.vfmd8La7acycdDRZ",
-		_id: "dnd5eweakened000"
-	});
-	CONFIG.DND5E.conditionTypes.weakened = {
-		label: "Weakened",
-		icon: "icons/svg/downgrade.svg",
+		img: "icons/svg/downgrade.svg",
 		reference: "Compendium.delvebound.delvebound-rules.JournalEntry.i5YP4ohBDy7hoMlD.JournalEntryPage.vfmd8La7acycdDRZ"
 	};
 	//New Class Feature Types
@@ -618,5 +570,26 @@ Hooks.once("init", () => {
 	CONFIG.DND5E.featureTypes.class.subtypes.exploit = "Master's Exploit";
 	//Culture feat type
 	CONFIG.DND5E.featureTypes.feat.subtypes.culture = "Culture";
+	CONFIG.DND5E.featureTypes.feat.subtypes.stamina = "Stamina";
+	CONFIG.DND5E.armorClasses.protectivescales= {
+    label: 'Protective Scales',
+    formula: '12 + @abilities.dex.mod'
+  };
  });
  
+ Hooks.on("dnd5e.advancementManagerComplete", (manager) => {
+	 const actor = manager.actor;
+	 //console.log(actor);
+     const staminaItem = actor.items.find(i => i.system.identifier === "stamina");
+     //console.log(staminaItem);
+    //Null backout
+    if (!staminaItem) return null;
+	 const staminaClasses =["delve_barbarian", "delve_monk", "delve_ranger", "delve_rogue", "delve_thief", "delve_warrior", "delve_crusader", "delve_nightblade", "delve_spellsword", "stamina-initiate"];
+	console.log(actor.classes);
+	const totalStamina = staminaClasses.reduce((total, identifier) => {
+  const value = actor.system.scale[identifier]?.stamina?.value ?? 0;
+  //console.log(value);
+  return total + value;
+}, 0);
+ staminaItem.update({"system.uses.max": totalStamina});
+ });
