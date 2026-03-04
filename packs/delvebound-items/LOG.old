@@ -1,26 +1,3 @@
-2026/03/01-13:50:48.550 5c44 Recovering log #2213
-2026/03/01-13:50:48.565 5c44 Delete type=0 #2213
-2026/03/01-13:50:48.565 5c44 Delete type=3 #2194
-2026/03/01-21:30:12.774 556c Level-0 table #2225: started
-2026/03/01-21:30:12.791 556c Level-0 table #2225: 1097580 bytes OK
-2026/03/01-21:30:12.792 556c Delete type=0 #2223
-2026/03/01-21:30:12.795 556c Manual compaction at level-0 from '!folders!0gQs3F5TkA9zOdhT' @ 72057594037927935 : 1 .. '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 0 : 0; will stop at (end)
-2026/03/01-21:30:12.795 556c Manual compaction at level-1 from '!folders!0gQs3F5TkA9zOdhT' @ 72057594037927935 : 1 .. '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 0 : 0; will stop at '!items.effects!ukcrff4RcLKm5YjP.dYIYyXemycWKn3Ma' @ 98056 : 1
-2026/03/01-21:30:12.795 556c Compacting 1@1 + 6@2 files
-2026/03/01-21:30:12.856 556c Generated table #2226@1: 1159 keys, 2124346 bytes
-2026/03/01-21:30:12.894 556c Generated table #2227@1: 1006 keys, 2124932 bytes
-2026/03/01-21:30:12.946 556c Generated table #2228@1: 999 keys, 2122724 bytes
-2026/03/01-21:30:12.985 556c Generated table #2229@1: 999 keys, 2122397 bytes
-2026/03/01-21:30:13.018 556c Generated table #2230@1: 959 keys, 2123359 bytes
-2026/03/01-21:30:13.070 556c Generated table #2231@1: 2737 keys, 2132820 bytes
-2026/03/01-21:30:13.074 556c Generated table #2232@1: 262 keys, 108305 bytes
-2026/03/01-21:30:13.074 556c Compacted 1@1 + 6@2 files => 12858883 bytes
-2026/03/01-21:30:13.075 556c compacted to: files[ 0 0 9 0 0 0 0 ]
-2026/03/01-21:30:13.075 556c Delete type=2 #2215
-2026/03/01-21:30:13.124 556c Delete type=2 #2216
-2026/03/01-21:30:13.165 556c Delete type=2 #2217
-2026/03/01-21:30:13.170 556c Delete type=2 #2218
-2026/03/01-21:30:13.183 556c Delete type=2 #2219
-2026/03/01-21:30:13.184 556c Delete type=2 #2220
-2026/03/01-21:30:13.185 556c Delete type=2 #2225
-2026/03/01-21:30:13.192 556c Manual compaction at level-1 from '!items.effects!ukcrff4RcLKm5YjP.dYIYyXemycWKn3Ma' @ 98056 : 1 .. '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 0 : 0; will stop at (end)
+2026/03/04-08:56:12.791 528c Recovering log #2254
+2026/03/04-08:56:12.802 528c Delete type=0 #2254
+2026/03/04-08:56:12.803 528c Delete type=3 #2252
