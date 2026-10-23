@@ -1,3 +1,29 @@
-2026/03/04-08:56:12.791 528c Recovering log #2254
-2026/03/04-08:56:12.802 528c Delete type=0 #2254
-2026/03/04-08:56:12.803 528c Delete type=3 #2252
+2026/10/23-16:12:02.782 e10 Recovering log #2285
+2026/10/23-16:12:02.787 e10 Delete type=0 #2285
+2026/10/23-16:12:02.787 e10 Delete type=3 #2283
+2026/10/23-16:14:28.866 1290 Level-0 table #2290: started
+2026/10/23-16:14:28.958 1290 Level-0 table #2290: 5039231 bytes OK
+2026/10/23-16:14:28.959 1290 Delete type=0 #2288
+2026/10/23-16:14:29.183 1290 Manual compaction at level-0 from '!folders!0gQs3F5TkA9zOdhT' @ 72057594037927935 : 1 .. '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 0 : 0; will stop at (end)
+2026/10/23-16:14:29.183 1290 Manual compaction at level-1 from '!folders!0gQs3F5TkA9zOdhT' @ 72057594037927935 : 1 .. '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 0 : 0; will stop at '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 102491 : 1
+2026/10/23-16:14:29.183 1290 Compacting 1@1 + 9@2 files
+2026/10/23-16:14:29.215 1290 Generated table #2291@1: 1159 keys, 2126269 bytes
+2026/10/23-16:14:29.247 1290 Generated table #2292@1: 1004 keys, 2123084 bytes
+2026/10/23-16:14:29.278 1290 Generated table #2293@1: 999 keys, 2123212 bytes
+2026/10/23-16:14:29.312 1290 Generated table #2294@1: 1000 keys, 2125475 bytes
+2026/10/23-16:14:29.344 1290 Generated table #2295@1: 959 keys, 2125005 bytes
+2026/10/23-16:14:29.376 1290 Generated table #2296@1: 2739 keys, 2133501 bytes
+2026/10/23-16:14:29.382 1290 Generated table #2297@1: 296 keys, 122177 bytes
+2026/10/23-16:14:29.382 1290 Compacted 1@1 + 9@2 files => 12878723 bytes
+2026/10/23-16:14:29.382 1290 compacted to: files[ 0 0 7 0 0 0 0 ]
+2026/10/23-16:14:29.383 1290 Delete type=2 #2212
+2026/10/23-16:14:29.383 1290 Delete type=2 #2221
+2026/10/23-16:14:29.383 1290 Delete type=2 #2238
+2026/10/23-16:14:29.384 1290 Delete type=2 #2239
+2026/10/23-16:14:29.384 1290 Delete type=2 #2240
+2026/10/23-16:14:29.385 1290 Delete type=2 #2241
+2026/10/23-16:14:29.385 1290 Delete type=2 #2242
+2026/10/23-16:14:29.386 1290 Delete type=2 #2243
+2026/10/23-16:14:29.386 1290 Delete type=2 #2266
+2026/10/23-16:14:29.387 1290 Delete type=2 #2290
+2026/10/23-16:14:29.651 1290 Manual compaction at level-1 from '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 102491 : 1 .. '!items.effects!zzrOwJKHtLjYcIkB.PA3v6bzYUc0IDX3q' @ 0 : 0; will stop at (end)
